@@ -1,3 +1,6 @@
+section{
+    margin-bottom: 200px;
+}
 .bat{
     width: 30%;
     transition: transform 0.3s ease-in;
@@ -24,4 +27,217 @@
 }
 .field:hover .ball{
     transform: translate(900px, -300px);
+}
+/* Animation-ball section */
+.box-animation{
+    display: flex;
+    justify-content: center;
+}
+.inner{
+    width: 500px;
+    height: 500px;
+    background-color: tomato;
+    position: relative;
+}
+.soft-ball{
+    margin: 20px;
+    width: 50px;
+    position: absolute;
+    height: 50px;
+    border-radius: 25px;
+    background-color: yellow;
+    /* example 5s linear 2s infinite alternate; */
+    animation: motion 2s linear 0.1s infinite alternate;
+}
+.hard-ball{
+    margin: 20px;
+    width: 50px;
+    position: absolute;
+    height: 50px;
+    border-radius: 25px;
+    background-color: green;
+    /* example 5s linear 2s infinite alternate; */
+    animation: hard 2s linear 0.1s infinite alternate;
+}
+.round-ball{
+    margin: 20px;
+    width: 50px;
+    position: absolute;
+    height: 50px;
+    border-radius: 25px;
+    background-color: black;
+    /* example 5s linear 2s infinite alternate; */
+    animation: round 2s linear 0.1s infinite alternate;
+}
+@keyframes motion {
+    0%{
+        top: 0;
+        left: 0;
+    }
+    25%{
+        top: 400px;
+        left: 30%;
+
+    }
+    50%{
+        top: 0;
+        left: 50%;
+    }
+    75%{
+        top: 400px;
+        left: 70%;
+    }
+    100%{
+        top: 0;
+        left: 400px;
+    }
+}
+@keyframes hard {
+    100%{
+        top: 0;
+        left: 0;
+    }
+    75%{
+        top: 400px;
+        left: 30%;
+
+    }
+    50%{
+        top: 0;
+        left: 50%;
+    }
+    25%{
+        top: 400px;
+        left: 70%;
+    }
+    0%{
+        top: 0;
+        left: 400px;
+    }
+}
+@keyframes round {
+    100%{
+        top: 50%;
+        left: 0;
+    }
+    75%{
+        top: 50%;
+        left: 30%;
+
+    }
+    50%{
+        top: 50%;
+        left: 50%;
+    }
+    25%{
+        top: 50%;
+        left: 70%;
+    }
+    0%{
+        top: 50%;
+        left: 400px;
+    }
+}
+/* flex login form */
+.login-form{
+    display: flex;
+    justify-content: center;
+}
+.login-detail{
+    display: flex;
+    flex-direction: column;
+}
+.login-detail h1{
+    color: red;
+    text-align: center;
+    font-size: 2.6em;
+    position: relative;
+}
+.login-detail h1::before{
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    width: 70%;
+    height: 2px;
+    background: red;
+    left: 15%;
+}
+.login-detail h1::after{
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    width: 70%;
+    height: 5px;
+    background: red;
+    left: 15%;
+}
+.login-detail input, button{
+    font-size: 1.4em;
+    padding: 5px;
+}
+.login-detail button{
+    background: orange;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+nav a{
+    text-decoration: none;
+    font-size: 1.5em;
+    margin-right: 15px;
+    color: black;
+}
+nav span i{
+    transition: transform 0.7s ease-in-out;
+    font-size: 1.8em;
+}
+nav i:hover{
+    transform: rotate(360deg);
+    color: red;
+}
+/* clander by grid */
+.calendar-title{
+    font-size: 3em;
+    text-align: center;
+    position: relative;
+}
+.calendar-title::before{
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    width: 30%;
+    height: 2px;
+    background: black;
+    left: 35%;
+}
+.calendar-title::after{
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    width: 30%;
+    height: 5px;
+    background: black;
+    left: 35%;
+}
+.clender{
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 2em repeat(5, 1fr);
+    grid-gap: 1em;
+}
+.date, .day{
+    background-color: cornflowerblue;
+    font-size: 3em;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pevious, .day{
+    background-color: darkgrey;
+}
+.day{
+    font-size: 2em;
 }
