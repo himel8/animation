@@ -241,3 +241,40 @@ nav i:hover{
 .day{
     font-size: 2em;
 }
+/* image gallery by flexBox */
+.gallery-album{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.gellary{
+    width: 300px;
+    height: 300px;
+    border: 2px solid goldenrod;
+    border-radius: 10px;
+    position: relative;
+    margin: 10px;
+}
+.gallary-image img{
+    width: 100%;
+    border-radius: 10px;
+}
+.gallary-description{
+    position: absolute;
+    top: 0px;
+    padding: 10px;
+    background: rgba(210, 105, 30, 0.4);
+    height: 93%;
+    display: none;
+    
+}
+.gellary:hover .gallary-description{
+    display: block;
+    transition: display 10s linear;
+}
+.gallary-description h3{
+    font-size: 1.5em;
+    color: #fff;
+    background: black;
+
+}
